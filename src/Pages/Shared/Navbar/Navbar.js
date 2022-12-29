@@ -1,5 +1,6 @@
 import React from 'react';
 import {Link} from 'react-router-dom'
+import {TfiList} from 'react-icons/tfi'
 
 const Navbar = () => {
     const menuItems =
@@ -22,8 +23,8 @@ const Navbar = () => {
         <nav class="bg-white border-gray-200 px-2 sm:px-4 py-2.5 rounded ">
             <div class="container flex flex-wrap items-center justify-between mx-auto">
                 {/* First part */}
-                <Link to="https://flowbite.com/" class="flex items-center">
-                    <img src="https://flowbite.com/docs/images/logo.svg" class="h-6 mr-3 sm:h-9" alt="Flowbite Logo" />
+                <Link to="/" class="flex items-center">
+                    <TfiList class="text-indigo-600 mr-4 border-2 border-indigo-600 rounded-full h-10 w-10 p-2"/>
                     <span class="self-center text-xl font-semibold whitespace-nowrap ">Task Manager</span>
                 </Link>
 
