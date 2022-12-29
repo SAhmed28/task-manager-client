@@ -5,11 +5,11 @@ const MyTask = () => {
     return (
 
         <div class="overflow-x-auto mx-20 mt-8 relative shadow-md sm:rounded-lg">
-            <table class="w-full text-sm text-left text-gray-500 ">
-                <thead class="text-xs text-gray-700 uppercase bg-gray-50 ">
+            <table class="w-full text-sm text-left text-gray-500 text-center">
+                <thead class="text-xs text-gray-700 uppercase bg-gray-50">
                     <tr>
                         <th scope="col" class="py-3 px-6">
-                            Complete btn
+                            Status
                         </th>
                         <th scope="col" class="py-4 px-6">
                             Image
