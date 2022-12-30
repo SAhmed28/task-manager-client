@@ -89,23 +89,23 @@ const MyTask = () => {
     }
     return (
 
-        <div className="overflow-x-auto mx-20 mt-8 relative shadow-md sm:rounded-lg">
+        <div className="overflow-x-auto mx-2 md:mx-20 mt-8 relative shadow-md sm:rounded-lg">
             <table className="w-full text-sm text-left text-gray-500 text-center">
                 <thead className="text-xs text-gray-700 uppercase bg-gray-50">
                     <tr>
-                        <th scope="col" className="py-3 px-2">
+                        <th scope="col" className="py-3 px-2 md:px-2">
                             Status
                         </th>
-                        <th scope="col" className="py-4 px-2">
+                        <th scope="col" className="py-4 px-2 md:px-2">
                             Image
                         </th>
-                        <th scope="col" className="py-4 px-6">
+                        <th scope="col" className="py-4 px-2 md:px-6">
                             Task
                         </th>
-                        <th scope="col" className="py-4 px-4">
+                        <th scope="col" className="py-4 px-1 md:px-4">
 
                         </th>
-                        <th scope="col" className="py-4 px-4">
+                        <th scope="col" className="py-4 px-2 md:px-4">
 
                         </th>
                     </tr>
@@ -113,23 +113,23 @@ const MyTask = () => {
                 <tbody>
                     {
                         myTasks.map((mytask, i) => <tr key={i} className="bg-white border-b  ">
-                            <td scope="row" className="py-4 px-2 font-medium text-gray-900 whitespace-nowrap ">
+                            <td scope="row" className="py-4 px-2 md:px-2 font-medium text-gray-900 whitespace-nowrap ">
                                 <button onClick={() => handleComplete(mytask._id)} className=" text-white bg-gradient-to-r from-cyan-400 via-cyan-500 to-cyan-600 hover:bg-gradient-to-br 
-                                        focus:ring-4 focus:outline-none focus:ring-cyan-300 font-medium rounded-lg text-sm px-4 py-2 text-center mr-2 mb-2">
+                                        focus:ring-4 focus:outline-none focus:ring-cyan-300 font-medium rounded-lg px-2 py-1 md:text-sm md:px-4 md:py-2 text-center mr-2 mb-2">
                                     Complete
                                 </button>
                             </td>
-                            <td className="py-4 px-2">
+                            <td className="py-4 px-2 md:px-2">
                                 <img src={mytask.image ? mytask.image : ''} className='h-12 w-20 rounded mx-auto' alt="" />
                             </td>
-                            <td className="py-4 px-6">
+                            <td className="py-4 px-2 md:px-6">
                                 {mytask.task}
                             </td>
 
-                            <td className="py-4 px-4 text-right">
+                            <td className="py-4 px-1 md:px-4 text-right">
                                 <button onClick={() => setEditingTask(mytask)} htmlFor="edit-modal" className="font-medium text-blue-600  hover:underline">Edit</button>
                             </td>
-                            <td className="py-4 px-4 text-right">
+                            <td className="py-4 px-2 md:px-4 text-right">
                                 <button onClick={() => setDeletingTask(mytask)} htmlFor="confirmation-modal" className="font-medium text-red-600  hover:underline">Delete</button>
                             </td>
                         </tr>)

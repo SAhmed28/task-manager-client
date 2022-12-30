@@ -89,7 +89,7 @@ const CompletedTask = () => {
 
 
     return (
-        <div className="overflow-x-auto mx-20 mt-8 relative shadow-md sm:rounded-lg">
+        <div className="overflow-x-auto mx-2 md:mx-20 mt-8 relative shadow-md sm:rounded-lg">
             <table className="w-full text-sm text-left text-gray-500 text-center">
                 <thead className="text-xs text-gray-700 uppercase bg-gray-50 ">
                     <tr>

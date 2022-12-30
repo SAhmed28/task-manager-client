@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import { useForm } from "react-hook-form";
 import toast from 'react-hot-toast';
 import { useNavigate } from 'react-router-dom';
@@ -51,7 +51,24 @@ const AddTask = () => {
                         })
                 }
             })
+
     }
+
+    useEffect(() => {
+        const listener = event => {
+            if (event.code === "Enter" || event.code === "NumpadEnter") {
+                console.log("Enter key was pressed. Run your function.");
+                event.preventDefault();
+                // callMyFunction();
+                handleAddTask()
+            }
+        };
+        document.addEventListener("keydown", listener);
+        return () => {
+            document.removeEventListener("keydown", listener);
+        };
+    }, []);
+
     return (
         <div className="block p-6 rounded-lg shadow-lg bg-white max-w-md mx-auto mt-8">
             <h2 className='text-xl font-bold pt-2 pb-6 text-blue-600'>Add a Task</h2>
